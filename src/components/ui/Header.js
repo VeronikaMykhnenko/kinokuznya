@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   button: {
-    marginLeft: "auto",
+    marginLeft: "35rem"
   },
   menu: {
     backgroundColor: theme.palette.common.blue,
@@ -166,8 +166,11 @@ export default function Header(props) {
             }
           }
           break;
-        case "/вхід/реєстрація":
+        case "/вхід":
           props.setValue(6);
+          break;
+          case "/реєстрація":
+            props.setValue(7);
           break;
         default:
           break;
@@ -197,15 +200,19 @@ export default function Header(props) {
       <Button
         className={classes.button}
         component={Link}
-        to="/Вхід/Реєстрація"
-        size="small"
-        variant="contained"
+        to="/Вхід"
         color="primary"
         onClick={() => props.setValue(6)}
       >
-        Вхід/Реєстрація
+        Вхід
       </Button>
-     
+      <Button
+        component={Link}
+        to="/Реєстрація"
+        color="primary"
+        onClick={() => props.setValue(7)}>
+      Реєстрація
+      </Button>
       <Checkbox
         icon={<Avatar className={classes.purpleAvatar}> AP</Avatar>}
         checkedIcon={<Avatar className={classes.orangeAvatar}> AP</Avatar>}
@@ -250,7 +257,7 @@ export default function Header(props) {
           divider
           button
           component={Link}
-          to="/Вхід/реєстрація"
+          to="/Вхід"
           classes={{root: classes.drawerLogin, selected: classes.drawerItemSelected}}
           onClick={() => {setOpenDrawer(false);
             props.setValue(6);
@@ -261,7 +268,25 @@ export default function Header(props) {
             <ListItemText 
             className={classes.drawerItem}
              disableTypography>
-              Вхід/реєстрація
+              Вхід
+            </ListItemText>
+          </ListItem>
+          <ListItem
+          divider
+          button
+          component={Link}
+          to="/реєстрація"
+          classes={{root: classes.drawerLogin, selected: classes.drawerItemSelected}}
+          onClick={() => {setOpenDrawer(false);
+            props.setValue(7);
+         }}
+            
+            disableTypography
+          >
+            <ListItemText 
+            className={classes.drawerItem}
+             disableTypography>
+              реєстрація
             </ListItemText>
           </ListItem>
         </List>

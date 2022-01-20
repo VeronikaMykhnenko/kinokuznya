@@ -45,13 +45,47 @@ export default createTheme({
             textDecoration: "none",
             color: "#adb5bd"
         },
+        h3: {
+            color: "#343a40",
+            fontSize: "2rem"
+        },
         h4: {
-            fontWeight: 300
+            fontWeight: 500,
+            fontSize: "1.25rem",
+            color: "#343a40",
             
         },
         h6: {
             fontWeight: 300,
             color: "#343a40"
-        }
+        },
+        h5: {
+            fontFamily: "Roboto",
+            color: "#343a40",
+            fontSize: "0.75rem",
+            fontWeight: 400,
+        },
+        subtitle2: {
+            fontSize: "0.75rem",
+            color: "#6c757d",
+            fontWeight: 400,
+        },
+        subtitle3: {
+            fontSize: "0.8rem",
+            color: "#6c757d",
+        },
+        body1: {
+            fontFamily: "Roboto",
+            color: "#495057;",
+            fontWeight: 400,
+            fontSize: "1rem",
+            textAlign: "left",
+            
+        },
+        newsItem: {
+            color: "#495057",
+            fontSize: "1rem",
+        },
+
     }
 });

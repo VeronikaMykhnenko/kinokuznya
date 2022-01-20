@@ -9,6 +9,12 @@ import Header from "./ui/Header";
 import Footer from './ui/Footer';
 import Information from './Information';
 import News from './News';
+import Article from './Article';
+import Registration from './ui/Registration';
+import Login from './Login';
+import Registration2 from './ui/Registration';
+import RegistrationNom from './ui/RegistrationNom';
+import Reset from './Reset';
 
 
 function App() {
@@ -32,11 +38,15 @@ function App() {
       <Route exact  path="/кастинги" component={() => <div>Кастинги</div>} />
       <Route exact  path="/новини" component={() => <News />} />
       <Route exact  path="/rental&sale" component={() => <div>Rental&Sale</div>} />
-      <Route exact  path="/вхід/реєстрація" component={() => <div>Вхід/реєстрація</div>} />
+      <Route exact  path="/вхід" component={() => <Login />} />
+      <Route exact  path="/реєстрація" component={() => <Registration /> } />
+
       <Route exact  path="/Публічна оферта" component={() => <div>Публічна оферта</div>} />
       <Route exact path="/Зворотній зв'язок" component={() => <div>Зворотній зв'язок</div>} />
       <Route exact path="/Інформація" component={() => <Information />} />
       <Route exact path="/реклама" component={() => <Advertising />}/>
+      <Route exact path="/новина" component={() => <Article />}/>
+      <Route  exact path="/reset" component={() => <Reset />}/>
     </Switch>
     <Footer />
     </BrowserRouter>

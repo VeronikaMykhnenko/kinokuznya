@@ -46,7 +46,7 @@ export default function Footer() {
     return (
      <footer className={classes.footer}>
          <Hidden smDown>
-        <Grid container justify="center" className={classes.mainContainer} >
+        <Grid container justifyContent="center" className={classes.mainContainer} >
             <Grid item> 
             <Grid container direction="row" spacing={2} className={classes.link} >
                 <Grid item className={classes.link} component={Link} to="/Публічна оферта">Публічна оферта</Grid>

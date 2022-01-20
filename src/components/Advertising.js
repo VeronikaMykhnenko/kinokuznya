@@ -17,7 +17,9 @@ export default function Advertising() {
 
     return (
         <Grid container direction="column" xs={12} >
-            <Grid item className={classes.informAd} style={{ padding: "3em", marginRight: "5em", marginLeft: "5em", marginBottom: "1em" }}>
+            <Grid item 
+            className={classes.informAd} 
+            style={{ padding: "3em", marginRight: "5em", marginLeft: "5em", marginBottom: "1em" }}>
                 <Grid item  >
                 <Typography variant="h3" style={{ textAlign: 'center'}}>
                 Реклама на сайті
