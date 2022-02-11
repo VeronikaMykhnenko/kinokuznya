@@ -27,6 +27,7 @@ export default createTheme({
             main: `${whiteSnow}`
         },
     },
+    
     typography: {
         tab: {
             fontFamily: "Roboto",
@@ -51,19 +52,20 @@ export default createTheme({
         },
         h4: {
             fontWeight: 500,
-            fontSize: "1.25rem",
+            fontSize: "1.2rem",
             color: "#343a40",
             
+        },
+        
+        h5: {
+            fontFamily: "Roboto",
+            color: "#343a40",
+            fontSize: "1rem",
+            fontWeight: 400,
         },
         h6: {
             fontWeight: 300,
             color: "#343a40"
-        },
-        h5: {
-            fontFamily: "Roboto",
-            color: "#343a40",
-            fontSize: "0.75rem",
-            fontWeight: 400,
         },
         subtitle2: {
             fontSize: "0.75rem",

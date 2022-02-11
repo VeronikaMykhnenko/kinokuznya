@@ -3,12 +3,11 @@ import AppBar from "@material-ui/core/AppBar";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-// import Typography from '@material-ui/core/Typography';
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Button from "@material-ui/core/Button";
 import Avatar from "@material-ui/core/Avatar";
-import { Checkbox, IconButton } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/styles";
@@ -40,7 +39,7 @@ function ElevationScroll(props) {
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    marginBottom: "3em",
+    
     [theme.breakpoints.down("md")]: {
       height: "2em",
     },
@@ -50,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     height: "4em",
+    marginLeft: "4rem",
     [theme.breakpoints.down("md")]: {
       height: "4em",
     },
@@ -112,8 +112,6 @@ const useStyles = makeStyles((theme) => ({
       opacity: 1,
       textShadow: "0px 0px 1px white"
     }
-
-    
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1
@@ -166,12 +164,7 @@ export default function Header(props) {
             }
           }
           break;
-        case "/вхід":
-          props.setValue(6);
-          break;
-          case "/реєстрація":
-            props.setValue(7);
-          break;
+          
         default:
           break;
       }
@@ -202,21 +195,21 @@ export default function Header(props) {
         component={Link}
         to="/Вхід"
         color="primary"
-        onClick={() => props.setValue(6)}
       >
         Вхід
       </Button>
       <Button
         component={Link}
-        to="/Реєстрація"
+        to="/реєстрація"
         color="primary"
-        onClick={() => props.setValue(7)}>
+        >
       Реєстрація
       </Button>
-      <Checkbox
-        icon={<Avatar className={classes.purpleAvatar}> AP</Avatar>}
-        checkedIcon={<Avatar className={classes.orangeAvatar}> AP</Avatar>}
-      />
+      <div>
+      <Avatar 
+      component={Link} 
+      to="/account"/>
+      </div>
     </React.Fragment>
   );
 
@@ -259,9 +252,6 @@ export default function Header(props) {
           component={Link}
           to="/Вхід"
           classes={{root: classes.drawerLogin, selected: classes.drawerItemSelected}}
-          onClick={() => {setOpenDrawer(false);
-            props.setValue(6);
-         }}
             
             disableTypography
           >
@@ -277,10 +267,6 @@ export default function Header(props) {
           component={Link}
           to="/реєстрація"
           classes={{root: classes.drawerLogin, selected: classes.drawerItemSelected}}
-          onClick={() => {setOpenDrawer(false);
-            props.setValue(7);
-         }}
-            
             disableTypography
           >
             <ListItemText 

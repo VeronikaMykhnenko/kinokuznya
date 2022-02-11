@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import zIndex from '@material-ui/core/styles/zIndex';
 import Grid  from '@material-ui/core/Grid';
 import Button  from '@material-ui/core/Button';
 import { Instagram, Facebook, Telegram, YouTube} from '@material-ui/icons';
@@ -50,7 +49,7 @@ export default function Footer() {
             <Grid item> 
             <Grid container direction="row" spacing={2} className={classes.link} >
                 <Grid item className={classes.link} component={Link} to="/Публічна оферта">Публічна оферта</Grid>
-                <Grid item className={classes.link} component={Link} to="/Зворотній зв'язок">Зворотній зв'язок</Grid>
+                <Grid item className={classes.link} component={Link} to="/contact">Зворотній зв'язок</Grid>
                 <Grid item className={classes.link} component={Link} to="/Інформація">Інформація</Grid>
                 <Grid item className={classes.link} component={Link} to="/реклама">Реклама на сайті</Grid>
                 <Grid item >
